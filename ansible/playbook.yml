@@ -1,0 +1,7 @@
+- name: "Provision kathara"
+  hosts: kathara
+  become: yes
+  roles:
+    - role: kathara
+      vars:
+        - user_name: kathara

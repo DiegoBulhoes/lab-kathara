@@ -1,0 +1,7 @@
+plugin: gcp_compute
+projects:
+  - kathara
+auth_kind: serviceaccount
+keyed_groups:
+  - key: tags['items']
+    separator: ""
