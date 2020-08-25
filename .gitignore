@@ -24,4 +24,4 @@ override.tf.json
 *.tfvars
 
 **/*inventory.*
-!**/inventory.gcp.yml.sample
+!**/inventory.gcp.yml.example
