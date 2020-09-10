@@ -12,10 +12,10 @@ resource "google_compute_subnetwork" "public_subnetwork" {
   depends_on    = [google_compute_network.vpc_network]
 }
 
-resource "google_compute_firewall" "firewall_public_subnet" {
-  name    = "${var.project}-firewall-public"
-  network = google_compute_network.vpc_network.id
-
+resource "google_compute_firewall" "firewall_pub_kathara" {
+  name        = "${var.project}-firewall-public"
+  network     = google_compute_network.vpc_network.id
+  target_tags = ["kathara"]
   allow {
     protocol = "icmp"
   }
