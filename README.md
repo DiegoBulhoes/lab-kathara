@@ -2,6 +2,21 @@
 
 Para instanciar o laboratório será necessario instalar o [Terraform](https://terraform.io/) e o [Ansible](https://www.ansible.com/), após configuração das duas ferramentas será necessário instalar duas bibliotecas do Python **request** e **google-auth** para utilizar o [GCE **dynamic inventory**](https://docs.ansible.com/ansible/latest/scenario_guides/guide_gce.html)
 
+## Inicializar o laboratório
+
+Clonar o projeto
+
+```shell
+git clone --recurse-submodules https://github.com/DiegoBulhoes/lab-kathara
+```
+
+Exportar as variáveis de ambiente
+
+```shell
+export GCP_SERVICE_ACCOUNT_FILE=/path/keyfile.son  && \
+export GOOGLE_APPLICATION_CREDENTIALS=/path/keyfile.son
+```
+
 ## Terraform
 
 Um dos passos necessários para utilizar esse _setup_ é possuir uma par de _keys_ SSH, podendo ser gerado através do seguinte comando, para mais detalhes consulte a documentação atrves desse [link](https://wiki.debian.org/SSH)
@@ -46,6 +61,13 @@ Para Configurar o [Kathrá](https://github.com/KatharaFramework/Kathara/) será 
 
 ```shell
 export GOOGLE_APPLICATION_CREDENTIALS=/home/$USER/gcp-projects/kathara.json
+```
+
+Altere o valor da lista _projects_ com o respectivo nome do projeto do GCP.
+
+```text
+projects:
+  - "nome_do_projeto"
 ```
 
 Entre o diretório ansible e executar o seguinte comando.
