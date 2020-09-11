@@ -13,8 +13,8 @@ git clone --recurse-submodules https://github.com/DiegoBulhoes/lab-kathara
 Exportar as variáveis de ambiente
 
 ```shell
-export GCP_SERVICE_ACCOUNT_FILE=/path/keyfile.son  && \
-export GOOGLE_APPLICATION_CREDENTIALS=/path/keyfile.son
+export GCP_SERVICE_ACCOUNT_FILE=/path/keyfile.json  && \
+export GOOGLE_APPLICATION_CREDENTIALS=/path/keyfile.json
 ```
 
 ## Terraform
@@ -28,7 +28,7 @@ ssh-keygen -q -t rsa -f id_rsa_kathara -C kathara
 Após a geração da chave renomeie o arquivo [terraform/terraform.tfvars.sample](terraform/terraform.tfvars.sample) para terraform.tfvars (nesse arquivo irá conter todas as variáveis para criar as instâncias no GCP). Crie um [**service-accounts**](https://cloud.google.com/compute/docs/access/service-accounts) com uma chave do tipo **JSON** e exponha no ambiente através do variável _GCP_SERVICE_ACCOUNT_FILE_
 
 ```shell
-export GCP_SERVICE_ACCOUNT_FILE=/home/$USER/gcp-projects/kathara.json
+export GCP_SERVICE_ACCOUNT_FILE=/path/keyfile.json
 ```
 
 Para verificar se os arquivos possui algum erro de sintaxe ou de configuração das instâncias execute o seguinte comando:
@@ -63,7 +63,7 @@ Para Configurar o [Kathrá](https://github.com/KatharaFramework/Kathara/) será 
 export GOOGLE_APPLICATION_CREDENTIALS=/home/$USER/gcp-projects/kathara.json
 ```
 
-Altere o valor da lista _projects_ com o respectivo nome do projeto do GCP.
+Altere o valor da lista _projects_ com o respectivo nome do projeto do GCP no [inventory.gcp.yml](https://github.com/DiegoBulhoes/lab-kathara/blob/master/ansible/inventory.gcp.yml.example).
 
 ```text
 projects:
