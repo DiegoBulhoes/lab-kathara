@@ -1,21 +1,13 @@
 
 resource "google_compute_network" "vpc_network" {
-  name                    = "${var.project}-network"
-  auto_create_subnetworks = "false"
+  name = "${var.project}-network"
 }
 
-resource "google_compute_subnetwork" "public_subnetwork" {
-  name          = "${var.project}-public-subnet"
-  ip_cidr_range = var.ip_cidr_range_public
-  network       = google_compute_network.vpc_network.id
-  region        = var.region
-  depends_on    = [google_compute_network.vpc_network]
-}
-
-resource "google_compute_firewall" "firewall_pub_kathara" {
-  name        = "${var.project}-firewall-public"
+resource "google_compute_firewall" "firewall_pub_ingress_kathara" {
+  name        = "${var.project}-firewall-public-ingress"
   network     = google_compute_network.vpc_network.id
   target_tags = ["kathara"]
+
   allow {
     protocol = "icmp"
   }
@@ -24,6 +16,6 @@ resource "google_compute_firewall" "firewall_pub_kathara" {
     protocol = "tcp"
     ports    = var.port_firewall_public
   }
-  source_ranges = ["0.0.0.0/0"]
-  depends_on    = [google_compute_network.vpc_network]
+
+  depends_on = [google_compute_network.vpc_network]
 }

@@ -10,15 +10,11 @@ variable "user_name" {
   type = string
 }
 
+variable "machine_type" {
+  type = string
+}
+
 variable "project" {
-  type = string
-}
-
-variable "subnet" {
-  type = string
-}
-
-variable "ip_cidr_range_public" {
   type = string
 }
 

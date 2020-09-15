@@ -4,12 +4,10 @@ region  = "us-central1"
 
 project  = "kathara"
 
-subnet  = "subnetwork"
-
 user_name = "kathara"
-
-ip_cidr_range_public = "10.10.0.0/24"
 
 key_ssh = "~/.ssh/id_rsa_kathara.pub"
 
 port_firewall_public =["22", "9000"]
+
+machine_type= "e2-micro"

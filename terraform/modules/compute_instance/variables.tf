@@ -13,3 +13,9 @@ variable "public_subnetwork" {
 variable "key_ssh" {
   type = string
 }
+
+variable "machine_type" {
+  type = string
+}
+
+
