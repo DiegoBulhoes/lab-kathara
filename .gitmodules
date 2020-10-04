@@ -1,3 +1,0 @@
-[submodule "ansible/kathara"]
-	path = ansible/kathara
-	url = https://github.com/DiegoBulhoes/ansible-kathara
