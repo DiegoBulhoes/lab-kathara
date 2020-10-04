@@ -1,0 +1,9 @@
+---
+# defaults file for classroom
+repository:
+  [
+    {
+      url_repo: "https://github.com/KatharaFramework/Kathara-Labs.git",
+      dest_repo: "/home/kathara/Kathara-Labs",
+    },
+  ]
