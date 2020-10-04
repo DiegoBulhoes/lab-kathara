@@ -1,0 +1,3 @@
+[submodule "ansible/roles/kathara"]
+	path = ansible/roles/kathara
+	url = https://github.com/DiegoBulhoes/ansible-kathara
