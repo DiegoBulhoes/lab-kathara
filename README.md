@@ -1,6 +1,6 @@
 # lab-kathara
 
-Para instanciar o laboratório será necessario instalar o [Terraform](https://terraform.io/) e o [Ansible](https://www.ansible.com/), após configuração das duas ferramentas será necessário instalar duas bibliotecas do Python **request** e **google-auth** para utilizar o [GCE **dynamic inventory**](https://docs.ansible.com/ansible/latest/scenario_guides/guide_gce.html)
+Para instanciar o laboratório será necessario instalar o [Terraform](https://terraform.io/) e o [Ansible](https://www.ansible.com/), após configuração das duas ferramentas será necessário instalar duas bibliotecas do Python **requests** e **google-auth** para utilizar o [GCE **dynamic inventory**](https://docs.ansible.com/ansible/latest/scenario_guides/guide_gce.html)
 
 ## Inicializar o laboratório
 
